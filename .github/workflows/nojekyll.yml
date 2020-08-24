@@ -1,0 +1,18 @@
+# This is a basic workflow that is manually triggered
+
+name: .nojekyll file automatization
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  add_nojekell_file:
+    runs-on: ubuntu-latest
+    steps:
+    # Runs a single command using the runners shell
+    - name: Send greeting
+      run: |
+        cd ./docs
+        touch .nojekyll
