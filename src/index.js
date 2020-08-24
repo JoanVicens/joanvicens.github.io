@@ -38,4 +38,12 @@ import p5_print10 from './assets/projectes/p5/print10.png';
 import stickers_angel from './assets/projectes/stickers/angel.png';
 import stickers_eriso_bass from './assets/projectes/stickers/eriso-bass.png';
 import stickers_eriso_clarinet from './assets/projectes/stickers/eriso-clarinet.png';
-import stickers_erizo_hi from './assets/projectes/stickers/erizo-hi.png';
+import stickers_eriso_hi from './assets/projectes/stickers/eriso-hi.png';
+
+// css dices
+
+import d20 from './assets/projectes/daus/d20.png';
+import d12 from './assets/projectes/daus/d12.png';
+import d8 from './assets/projectes/daus/d8.png';
+import d6 from './assets/projectes/daus/d6.png';
+import d4 from './assets/projectes/daus/d4.png';
