@@ -19,6 +19,7 @@
     "animate.css": "^4.1.0",
     "bootstrap": "^4.5.2",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^4.2.1",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
