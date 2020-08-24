@@ -32,6 +32,17 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.nojekyll$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        esModule: false,
+                        name: "[name].[ext]",
+                        outputPath: "assets"
+                    }
+                }
+            },
+            {
                 test: /\.(svg|png|gif|jpg|jpeg)$/,
                 use: {
                     loader: "file-loader",
