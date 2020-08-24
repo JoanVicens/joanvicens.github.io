@@ -1,9 +1,7 @@
 const path = require('path');
-const commonConfig = require('./webpack.common');
-const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = merge(commonConfig, {
+module.exports = {
     mode: 'development',
     output: {
         filename: '[name].bundle.js',
@@ -21,8 +19,8 @@ module.exports = merge(commonConfig, {
                     loader: "file-loader",
                     options: {
                         esModule: false,
-                        name: "[name].[hash].[ext]",
-                        outputPath: "imgs"
+                        name: "[name].[ext]",
+                        outputPath: "assets"
                     }
                 }
             }
@@ -33,4 +31,4 @@ module.exports = merge(commonConfig, {
             template: "./src/template.html"
         })
     ],
-});
+}

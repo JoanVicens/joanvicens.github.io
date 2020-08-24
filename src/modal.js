@@ -79,9 +79,6 @@ function projectfullScreen(modal, img_index) {
 }
 
 export function showFullDescription(hash) {
-
-    console.log(hash);
-
     // Hiddes the previous descriptions 
     let projects_descriptions = Array.from(document.querySelectorAll('.project-description'))
     projects_descriptions.forEach(project => project.style.display = 'none')
@@ -91,9 +88,9 @@ export function showFullDescription(hash) {
     
     if(modal) {
         // Node visibility
-        modal.style.display = 'block';
         modal.classList.remove('animate__fadeOutDown');
         modal.classList.add('animate__fadeInUp');
+        modal.style.display = 'block';
         projects_section.scrollIntoView();
 
         // Carousel
