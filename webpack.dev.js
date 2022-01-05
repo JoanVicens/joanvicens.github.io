@@ -9,21 +9,10 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
-                test: /\.(svg|png|jpg|gif|jpeg)$/,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        esModule: false,
-                        name: "[name].[ext]",
-                        outputPath: "assets"
-                    }
-                }
-            }
+          {
+              test: /\.scss$/,
+              use: ['style-loader', 'css-loader', 'sass-loader']
+          }
         ]
     },
     plugins: [

@@ -1,24 +1,24 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: 'development',
     output: {
-        filename: '[name]-[contentHash].js',
+        filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'docs')
     },
     optimization: {
         minimizer: [
-            new OptimizeCssAssetsPlugin(),
+            new CssMinimizerPlugin(),
             new TerserPlugin()
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: "[name]-[contentHash].css" }),
+        new MiniCssExtractPlugin({ filename: "[name]-[hash].css" }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: "./src/template.html",
@@ -33,17 +33,6 @@ module.exports = {
         rules: [
             {
                 test: /\.nojekyll$/,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        esModule: false,
-                        name: "[name].[ext]",
-                        outputPath: "assets"
-                    }
-                }
-            },
-            {
-                test: /\.(svg|png|gif|jpg|jpeg)$/,
                 use: {
                     loader: "file-loader",
                     options: {
