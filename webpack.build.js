@@ -6,7 +6,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'docs')
@@ -31,6 +31,16 @@ module.exports = {
     ],
     module: {
         rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
             {
                 test: /\.nojekyll$/,
                 use: {

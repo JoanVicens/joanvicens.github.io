@@ -14,8 +14,11 @@
   },
   "homepage": "https://github.com/JoanVicens/joanvicens.github.io",
   "devDependencies": {
+    "@babel/core": "^7.17.4",
+    "@babel/preset-env": "^7.16.11",
     "@glidejs/glide": "^3.5.2",
     "animate.css": "^4.1.1",
+    "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.5.1",
@@ -33,6 +36,10 @@
     "webpack-dev-server": "^4.7.2",
     "webpack-merge": "^5.8.0"
   },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoanVicens/joanvicens.github.io.git"
