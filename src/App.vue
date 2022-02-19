@@ -1,19 +1,17 @@
 <script setup>
-    import Projects from './components/Projects.vue';
-    import Collaborations from './components/Collaborations.vue';
-    import Contact from './components/Contact.vue';
-    import Header from './components/Header.vue';
-    import Footer from './components/Footer.vue';
-    import ProjectDetail from './components/ProjectDetail.vue';
+import CollaborationsSection from "./components/collaborations-section.vue";
+import ContactSection from "./components/contact-section.vue";
+import FooterSection from "./components/footer-section.vue";
+import HeaderSection from "./components/header-section.vue";
+import ProjectDetail from "./components/project-detail.vue";
+import ProjectsSection from "./components/projects-section.vue";
 </script>
 
 <template>
-    <div id="app">
-        <Header></Header>
-        <Projects></Projects>
-        <Collaborations></Collaborations>
-        <Contact></Contact>
-        <Footer></Footer>
-        <ProjectDetail></ProjectDetail>
-    </div>
+  <HeaderSection />
+  <ProjectsSection />
+  <CollaborationsSection />
+  <ContactSection />
+  <FooterSection />
+  <ProjectDetail />
 </template>
