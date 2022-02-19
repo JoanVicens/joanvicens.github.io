@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
   mode: "production",
@@ -18,13 +19,14 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: "[name]-[hash].css" }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./src/template.html",
+      template: "./src/index.html",
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
         removeComments: true,
       },
     }),
+    new VueLoaderPlugin(),
   ],
   module: {
     rules: [
@@ -69,6 +71,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.vue$/,
+        loader: "vue-loader",
       },
     ],
   },

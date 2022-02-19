@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joan Vicens</title>
-</head>
-<body>
-
-    <header>
-        <div class="wrapper container">
-            <h1>
-                Joan Vicens
-            </h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#collaborations">Collaborations</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            
-        </div>
-    </header>
-
+<template>
     <section id="projects" class="wrapper">
         <div class="container">
             <h1><span class="emoticon">👨‍💻</span>Projects</h1>
@@ -293,7 +263,6 @@
                         <li>JAVA</li> 
                         <li>ANDROID</li>
                         <li>REST API</li>
-                        <div>
                         </ul>
                     </footer>
                 </div>
@@ -363,52 +332,4 @@
             </div>
         </div>        
     </section>
-
-    <section id="collaborations" class="wrapper">
-        <div class="container">
-            <h1><span class="emoticon">🤝</span>Collaborations</h1>
-            <div class="collaboration-list">
-                <div class="collab">
-                    <div class="collab-content">
-                        <h2>Mijares' maps</h2>
-                        <p class="short-description">Maps for an paper</p>
-                        Several maps for paper of a study of the ecological risk in a river
-                        <footer class="description">
-                            <a href="https://www.sciencedirect.com/science/article/pii/S0160412020319590" class="more-info"
-                                target="_blank">MORE INFO</a>
-                            <ul class="tags">
-                                <li>Illustrator</li>
-                                <div>
-                            </ul>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="wrapper">
-        <div class="container">
-            <h1><span class="emoticon">👉</span>Get in touch</h1>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/joan-vicens/" target="_blank">Linkedin</a></li>
-                <li><a href="mailto:jwcervera@hotmail.com">Email</a></li>
-                <li><a href="https://github.com/JoanVicens" target="_blank">Git Hub</a></li>
-            </ul>
-
-        </div>
-    </section>
-
-    <footer id="source">
-        Source code for this website can be found on <a href="https://github.com/JoanVicens/joanvicens.github.io" target="_blank">Github</a>.
-    </footer>
-
-    <div id="img-view">
-        <span class="close-img-view">close</span>
-        <div class="modal-wrapper">
-            <div class="content-wrapper"></div>
-            <div class="glide-wrapper"></div>
-        </div>
-    </div>
-</body>
-</html>
+</template>

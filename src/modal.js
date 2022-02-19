@@ -1,15 +1,20 @@
 import Glide from "@glidejs/glide";
 
-const imageViewNode = document.getElementById("img-view");
+let imageViewComponent = {};
+let projects_section;
 
-const imageViewComponent = {
-  background: imageViewNode,
-  content_wrapper: imageViewNode.querySelector(".content-wrapper"),
-  glide_wrapper: imageViewNode.querySelector(".glide-wrapper"),
-  close_btn: imageViewNode.querySelector(".close-img-view"),
-};
+window.addEventListener("DOMContentLoaded", () => {
+  const imageViewNode = document.getElementById("img-view");
 
-const projects_section = document.getElementById("projects");
+  imageViewComponent = {
+    background: imageViewNode,
+    content_wrapper: imageViewNode.querySelector(".content-wrapper"),
+    glide_wrapper: imageViewNode.querySelector(".glide-wrapper"),
+    close_btn: imageViewNode.querySelector(".close-img-view"),
+  };
+
+  projects_section = document.getElementById("projects");
+});
 
 function projectfullScreen(modal, img_index) {
   // Full screen nodes
