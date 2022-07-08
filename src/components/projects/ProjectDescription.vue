@@ -1,28 +1,23 @@
 <template>
-    <article
-        id="en-ruta"
-        class="description"
-    >
-        <div class="controls">
-            <span class="expand">expand</span>
-            <span class="close" @click="close">minimize</span>
-        </div>
-
+    <article class="description">
+        <div class="close" @click="close">X</div>
         <div class="content">
             <h2>{{ project.name }}</h2>
             <div v-html="project.html"></div>
         </div>
 
-        <ul class="tags">
-            <li v-for="tag in project.tags" :key="tag">
-                {{ tag }}
-            </li>
-        </ul>
+        <Carrousel :images="project.images" /> 
+
+        <Tags :tags="project.tags"/>
     </article>
 </template>
 
 <script>
+    import Tags from '../Tags.vue';
+    import Carrousel from '../Carrousel.vue';
+
     export default {
+        components: { Tags, Carrousel },
         name: "ProjectDescription",
         props: ['project'],
         methods: {
@@ -36,60 +31,52 @@
 <style lang="scss" scoped>
     @import "../../styles/_colors.scss";
 
+    $padding: 30px;
+
     .description {
-        position: relative;
-        padding: 30px;
+        padding: $padding;
         border-bottom: 1px solid #fff;
         margin-bottom: 0;
         font-weight: normal;
-        max-height: 10000px;
         margin-bottom: 30px;
-        transition: all 1s cubic-bezier(.08,.82,.17,1);
-        overflow: hidden;
-        // display: none;
-        &.animate__fadeOutDown {
-            max-height: 0px;
-            margin-bottom: 0px;
-            padding: 0px;
-            border: none;
+    }
+
+    .close {
+        float: right;
+        margin-top: $padding;
+
+        &:hover {
+            color: $roig;
+        }
+    }
+
+    .content {
+        padding: 2rem 0rem;
+    }
+
+    .content::v-deep {
+
+        line-height: 1.3rem;
+
+        h2 {
+            margin-bottom: 1.5rem;
         }
 
+        p {
+            margin: 1rem 0;
+        }
+
+        ul {
+            padding-left: 40px;
+            margin: 1rem 0;
+
+            li {
+                margin: .2rem 0;
+            }
+        }
+        
         a {
             color: cadetblue
-        }
-        .slider-img {
-            width: 100%;
-            max-width: 400px;
-        }
-        .content {
-            padding: 2rem 0rem;
-        }
-        .controls {
-            position: absolute;
-            right: 10px;
-            top: 20px;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            span:hover {
-                cursor: pointer;
-            }
-            .expand:hover {
-                color: $verd;
-            }
-            .close:hover {
-                color: $roig;
-            }
-            span:last-child {
-                margin-left: 20px;
-            }
-            @media only screen and (max-width:320px) {
-                .expand {
-                    color: $verd;
-                }
-                .close {
-                    color: $roig;
-                }
-            }
         }
     }
 </style>

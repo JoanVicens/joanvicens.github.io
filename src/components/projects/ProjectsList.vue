@@ -1,6 +1,6 @@
 <template>
     <section>
-        <ProjectDescription v-if="project" :project="project" @close="hide" />
+        <ProjectDescription v-if="project" :project="project" @close="hide" ref="description" />
         <div class="projects-list">
             <ProjectCard 
                 v-for="project in projects"
@@ -25,6 +25,9 @@ export default defineComponent({
     methods: {
         display(project) {
             this.project = project;
+
+            const descriptionTop = this.$refs["description"].offsetTop;
+            window.scrollTo(0, descriptionTop);
         },
         hide() {
             this.project = null;
