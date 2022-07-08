@@ -1,42 +1,40 @@
-#projects {
-    color: #fff;
-    background: $gris;
-    .more-info {
-        background-color: #fff;
-        color: $gris;
-        &:hover {
-            background-color: $roig;
-            color: #fff;
-        }
-    }
-    .projects-list {
-        display: grid;
-        gap: 32px;
-        grid-auto-rows: 20rem;
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    }
-    .project {
-        background-color: $verd;
-        padding: 15px 15px;
-        display: flex;
-        flex-direction: column;
+<template>
+    <article
+        id="en-ruta"
+        class="description"
+    >
+        <div class="controls">
+            <span class="expand">expand</span>
+            <span class="close">minimize</span>
+        </div>
 
-        footer {
-            margin-top: auto;
-        }
+        <div class="content">
+            <h2>{{ project.name }}</h2>
+            <div v-html="project.html"></div>
+        </div>
 
-        .description {
-            overflow: hidden;
-            transition: max-height 0.6s ease-out;
-            font-weight: normal;
-        }
-        p.short-description { 
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 10px;
+        <ul class="tags">
+            <li v-for="tag in project.tags" :key="tag">
+                {{ tag }}
+            </li>
+        </ul>
+    </article>
+</template>
+
+<script>
+    export default {
+        name: "ProjectDescription",
+        props: ['project'],
+        created() {
+            // console.log(this.description.html)
         }
     }
-    .project-description {
+</script>
+
+<style lang="scss" scoped>
+    @import "../../styles/_colors.scss";
+
+    .description {
         position: relative;
         padding: 30px;
         border-bottom: 1px solid #fff;
@@ -92,4 +90,4 @@
             }
         }
     }
-}
+</style>

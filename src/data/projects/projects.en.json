@@ -1,0 +1,113 @@
+[
+    {
+        "id": "en-ruta",
+        "name": "En ruta",
+        "short_description": "Final project from the Corss-platform Aplication Development course",
+        "description": "An Android APP that calculates the best cycle route in the city of Castelló de la Plana including the local cycle ren tal stations.",
+        "html": "Crear una app que ajude el dia a dia dels usuaris de bicicas L'aplicació es capaç de: <ul> <li>Mostrar l'ocupació en temps real de les bases de Bicia</li><li> Calcular la ruta que ha de pendre el usuari tenint en compte les bases de Bicicas </li><li>Calcucar la ruta fins la bases amb bicis més pròxima</li><li>Calcular la ruta més adecuada per circular en bici</li><li>Guardar bases com a favories</li><li>Mostrar les estacions de Tram</li></ul> <p> L'aplicació utiliza l'API del <a href='https://www.openstreetmap.org' target='_blank' >Open Street Map</a > i un 'end point' de Bicicas per a obtindre l'informaicó necessària i presentar-la en un mapa de la ciutat de Castelló </p>A més l'app hem va servir d'excusa per a crear iconografía pròpia. Tant el logo de la aplicació com els marcadors del mapa, així com els iconos de les bàses favorites les són propis",
+        "images": [
+            "https://res.cloudinary.com/hota/image/upload/v1641419809/portfolio/marker_base_bicicas_negatiu_n6khij.png",
+            "https://res.cloudinary.com/hota/image/upload/v1641419807/portfolio/check_bock_checked_sxrz4y.png",
+            "https://res.cloudinary.com/hota/image/upload/v1641419806/portfolio/check_bock_unchecked_gdtmo4.png"
+        ],
+        "tags": [
+            "JAVA",
+            "ANDROID",
+            "REST API"
+        ]
+    },
+    {
+        "id": "cms",
+        "name": "Banda UJI CMS",
+        "short_description": "Final project from the Web Aplications Development course",
+        "description": "Custom CMS made for the 'Associació Cultural Banda UJI' whit the MEVN stack.",
+        "html": "CMS per a la Assoació Cultural Banda UJI realitzat amb l'stack MEVN (Vue.js, Node.js, Express, MongoDB) El CMS permet: <ul> <li>Gestió de newsletters</li><li>Enviament de newsletter</li><li>Gestió dels músics</li><li>Gestió dels assajos</li><li>Gestió dels concerts</li><li>Sincronitzar assajos i concerts amb Google calendar</li></ul>",
+        "images": [
+            "https://res.cloudinary.com/hota/image/upload/v1641419808/portfolio/bandauji-landingpage_vqgo58.png",
+            "https://res.cloudinary.com/hota/image/upload/v1641419806/portfolio/bandauji-musics_h0gtv0.png",
+            "https://res.cloudinary.com/hota/image/upload/v1641419806/portfolio/bandauji-newsletter_s4wp55.png"
+        ],
+        "tags": [
+            "MONGO",
+            "EXPRESS",
+            "VUE JS",
+            "NODE JS"
+        ]
+
+    },
+    {
+        "id": "hackathon19",
+        "name": "Hackathon 19",
+        "short_description": "Project realized during the course of the Hackathon",
+        "description": "We made an APP to predict the number of bikes in the stations of Bicicas using slastic search.",
+        "html": "<p>Participació al quart hackathon de Castelló, relacionat amb les smartcitys. </p><p> Juntament amb 3 companys més vam participar al repte de 480 realizant una applicació web que preveïa quines bases de bicicas teníen perill buidar-se per complet amb la ajuda de ElasticSearch</p>",
+        "images": [
+            "https://res.cloudinary.com/hota/image/upload/v1641419809/portfolio/foto_equip_zv6ruf.jpg"
+        ],
+        "tags": [
+            "Elastic Search",
+            "Kibana"
+        ]
+    },
+    {
+        "id": "p5",
+        "name": "Programing challanges",
+        "short_description": "My own spin on The Coding Train Challanges",
+        "description": "Smalls programing challanges from the Coding Train.",
+        "html": "Smalls programing challanges from the Coding Train.",
+        "images": [
+            {
+                "source": "https: //res.cloudinary.com/hota/image/upload/v1641419806/portfolio/arbre_zmt895.png",
+                "link": "https://editor.p5js.org/joanvicens/full/t5hf-nBUp"
+            },
+            {
+                "source": "https: //res.cloudinary.com/hota/image/upload/v1641419809/portfolio/linees_ahwazu.png",
+                "link": "https://editor.p5js.org/joanvicens/full/oQAAYXIpt"
+            },
+            {
+                "source": "https: //res.cloudinary.com/hota/image/upload/v1641419809/portfolio/print10_ehufo4.png",
+                "link": "https://editor.p5js.org/joanvicens/present/pjAyWKbfQ"
+            }
+        ],
+        "tags": [
+            "Java script",
+            "p5.js"
+        ]
+    },
+    {
+        "id": "stickers",
+        "name": "Sticker APP",
+        "short_description": "A custom sticker APP for whatsapp.",
+        "description": "",
+        "html": "A custom sticker APP for whatsapp.",
+        "images": [
+            "https: //res.cloudinary.com/hota/image/upload/v1641419808/portfolio/eriso-clarinet_t0vkdz.png",
+            "https: //res.cloudinary.com/hota/image/upload/v1641419808/portfolio/eriso-hi_clyp6b.png",
+            "https: //res.cloudinary.com/hota/image/upload/v1641419806/portfolio/angel_zo8waj.png",
+            "https: //res.cloudinary.com/hota/image/upload/v1641419808/portfolio/eriso-bass_vvwzak.png"
+        ],
+        "tags": [
+            "Java",
+            "Android",
+            "JSON",
+            "Photoshop"
+        ]
+    },
+    {
+        "id": "css-dices",
+        "name": "CSS ASSETS",
+        "short_description": "All 7 dices (d4, d6, d8, d10, d12, d20, d100) made for a dice rolling",
+        "description": "",
+        "html": "All 6 dices (d4, d6, d8, d10, d12, d20, d100) made for a dice rolling app exercise.",
+        "images": [
+            "https: //res.cloudinary.com/hota/image/upload/v1641419807/portfolio/d4_gpt71o.png",
+            "https: //res.cloudinary.com/hota/image/upload/v1641419807/portfolio/d6_fn1pwh.png",
+            "https: //res.cloudinary.com/hota/image/upload/v1641419807/portfolio/d8_vddomr.png",
+            "https: //res.cloudinary.com/hota/image/upload/v1641419807/portfolio/d12_ych4wg.png",
+            "https: //res.cloudinary.com/hota/image/upload/v1641419807/portfolio/d20_aqwegd.png"
+        ],
+        "tags": [
+            "CSS"
+        ]
+    }
+]
