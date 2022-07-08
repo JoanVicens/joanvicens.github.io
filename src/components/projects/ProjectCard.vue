@@ -6,7 +6,7 @@
         </p>
         {{ project.description }}
         <footer>
-            <MoreInfoButton @click="show(project)" />
+            <MoreInfoButton @click="show" />
             <Tags :tags="project.tags"/>
         </footer>
     </article>
@@ -21,8 +21,8 @@
         name: "ProjectCard",
         props: ['project',],
         methods: {
-            show(project) {
-                this.$emit('update:show', project);
+            show() {
+                this.$emit('showMore');
             },
         }
     }

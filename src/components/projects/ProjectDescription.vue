@@ -5,7 +5,7 @@
     >
         <div class="controls">
             <span class="expand">expand</span>
-            <span class="close">minimize</span>
+            <span class="close" @click="close">minimize</span>
         </div>
 
         <div class="content">
@@ -25,8 +25,10 @@
     export default {
         name: "ProjectDescription",
         props: ['project'],
-        created() {
-            // console.log(this.description.html)
+        methods: {
+            close() {
+                this.$emit('close');
+            }
         }
     }
 </script>
