@@ -46,7 +46,7 @@
         margin-bottom: 30px;
         transition: all 1s cubic-bezier(.08,.82,.17,1);
         overflow: hidden;
-        display: none;
+        // display: none;
         &.animate__fadeOutDown {
             max-height: 0px;
             margin-bottom: 0px;

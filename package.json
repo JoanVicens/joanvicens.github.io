@@ -68,5 +68,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoanVicens/joanvicens.github.io.git"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.7.0"
   }
 }
