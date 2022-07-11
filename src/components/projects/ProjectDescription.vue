@@ -1,6 +1,13 @@
 <template>
     <article class="description">
-        <div class="close" @click="close">X</div>
+        <div class="close" @click="close">
+            <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <line x1="17.5" x2="54.5" y1="17.5" y2="54.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+                    <line x1="54.5" x2="17.5" y1="17.5" y2="54.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+                </g>
+            </svg>
+        </div>
         <div class="content">
             <h2>{{ project.name }}</h2>
             <div v-html="project.html"></div>
@@ -31,10 +38,8 @@
 <style lang="scss" scoped>
     @import "../../styles/_colors.scss";
 
-    $padding: 30px;
-
     .description {
-        padding: $padding;
+        padding: 30px;
         border-bottom: 1px solid #fff;
         margin-bottom: 0;
         font-weight: normal;
@@ -43,15 +48,23 @@
 
     .close {
         float: right;
-        margin-top: $padding;
+        width: 2.5rem;
+
+        line {
+            stroke: white;
+            stroke-width: 2;
+        }
 
         &:hover {
-            color: $roig;
+            line {
+                stroke: $roig;
+                stroke-width: 4;
+            }
         }
     }
 
     .content {
-        padding: 2rem 0rem;
+        margin-bottom: 2rem;
     }
 
     .content::v-deep {
