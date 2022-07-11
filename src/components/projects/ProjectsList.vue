@@ -1,6 +1,6 @@
 <template>
     <section>
-        <ProjectDescription v-if="project" :project="project" @close="hide" ref="description" />
+        <ProjectDescription v-if="project" :project="project" @close="hide" :ref="'description'" />
         <div class="projects-list">
             <ProjectCard 
                 v-for="project in projects"
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { nextTick } from 'vue'
 import { defineComponent } from '@vue/composition-api'
 import ProjectCard from "./ProjectCard.vue";
 import ProjectDescription from "./ProjectDescription.vue";
@@ -23,11 +24,15 @@ export default defineComponent({
     name: "ProjectsList",
     components: { ProjectCard, Section, ProjectDescription },
     methods: {
-        display(project) {
+        async display(project) {
             this.project = project;
 
-            const descriptionTop = this.$refs["description"].offsetTop;
-            window.scrollTo(0, descriptionTop);
+            await nextTick()
+            
+            const el = this.$refs.description;
+            if(!el) return;
+            
+            window.scrollTo(0, el.offsetTop);
         },
         hide() {
             this.project = null;
@@ -36,7 +41,7 @@ export default defineComponent({
     data: () => ({
         projects,
         project: null,
-    }),
+    }),    
 });
 </script>
 
